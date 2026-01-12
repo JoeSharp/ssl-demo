@@ -1,4 +1,4 @@
-import { useComplexThing } from '../useComplexThing';
+import { useComplexThing } from './useComplexThing';
 
 function CounterDisplay() {
   const { state: { counter } } = useComplexThing();

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useComplexThing } from "../useComplexThing";
+import { useComplexThing } from "./useComplexThing";
 
 function PeopleTable() {
   const {state: {people}, incrementAge, removePerson} = useComplexThing();

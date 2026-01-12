@@ -1,26 +1,23 @@
-import {useComplexThingValue, ComplexState, ComplexThingContext } from './useComplexThing';
-import PersonManager from './components/PersonManager';
-import CounterManager from './components/CounterManager';
-
-const INITIAL_STATE: ComplexState = {
-  counter: 0,
-  people: [
-    { name: 'Alice', age: 20 },
-    { name: 'Bob', age: 34 },
-  ]
-};
+import { Route, Routes } from 'react-router';
+import ReducerDemo from './components/ReducerDemo';
+import PageChrome from './components/PageChrome';
+import FakeBlog from './components/FakeBlog';
+import LandingPage from './components/LandingPage';
 
 function App() {
-  // Create an instance of the API
-  const complexThingValue = useComplexThingValue(INITIAL_STATE);
+  return (
+    <div>
 
-  // Use the Provider to make it available to all children
-  return (<ComplexThingContext.Provider value={complexThingValue}>
-    <h1>Reducer Demo</h1>
-    <CounterManager />
-    <PersonManager />
-  </ComplexThingContext.Provider>
+      <Routes>
+        <Route path='/' element={<PageChrome />}>
+          <Route path="" element={<LandingPage />} />
+          <Route path='fakeBlog' element={<FakeBlog />} />
+          <Route path='complexThing' element={<ReducerDemo />} />
+        </Route>
+      </Routes>
+    </div>
   )
+
 }
 
 export default App

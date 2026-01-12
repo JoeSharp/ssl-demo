@@ -1,5 +1,5 @@
 import React from 'react';
-import { useComplexThing } from "../useComplexThing";
+import { useComplexThing } from "./useComplexThing";
 
 function AddNewPersonForm() {
   const { createNewAdult } = useComplexThing();

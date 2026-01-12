@@ -1,4 +1,4 @@
-import { useComplexThing } from "../useComplexThing";
+import { useComplexThing } from "./useComplexThing";
 
 function CounterIncrementButton() {
   const { incrementCounter } = useComplexThing();
